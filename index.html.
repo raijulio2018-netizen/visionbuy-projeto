@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionBuy | Autonomia & Inclusão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-escuro: #1a3a5f;
+            --azul-vibrante: #2c5282;
+            --verde-logo: #8cc63f;
+            --branco: #ffffff;
+            --gelo: #f4f7f6;
+            --texto: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: var(--texto); background-color: var(--gelo); line-height: 1.6; }
+
+        /* Barra de Navegação Superior */
+        nav {
+            background: rgba(26, 58, 95, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .logo-img { height: 45px; width: 45px; background: var(--branco); border-radius: 50%; padding: 5px; } /* Espaço para sua logo */
+        .logo-text { color: var(--branco); font-weight: 700; font-size: 1.4rem; letter-spacing: 1px; }
+        .logo-text span { color: var(--verde-logo); }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { color: var(--branco); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: var(--verde-logo); }
+
+        /* Hero - Seção de Impacto Visual */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--branco);
+            padding: 0 15%;
+        }
+
+        #home h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+        #home p { font-size: 1.3rem; margin-bottom: 40px; opacity: 0.9; max-width: 800px; }
+        .btn-call { background: var(--verde-logo); color: var(--azul-escuro); padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.4s; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-call:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(140, 198, 63, 0.3); }
+
+        /* Seções Gerais */
+        section { padding: 100px 10%; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--azul-escuro); margin-bottom: 60px; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: var(--verde-logo); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+
+        /* Impacto Social - A Parte Nova */
+        .impacto-box { background: var(--branco); padding: 50px; border-radius: 20px; display: flex; align-items: center; gap: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .impacto-text { flex: 1; }
+        .impacto-text h3 { color: var(--verde-logo); margin-bottom: 20px; font-size: 1.8rem; }
+        .impacto-stats { display: flex; gap: 30px; margin-top: 30px; }
+        .stat { border-left: 4px solid var(--verde-logo); padding-left: 15px; }
+        .stat h4 { font-size: 1.5rem; color: var(--azul-escuro); }
+
+        /* Grid de Funcionalidades */
+        .grid-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background: var(--branco); padding: 40px; border-radius: 15px; transition: 0.3s; border: 1px solid #eee; }
+        .feature-card:hover { border-color: var(--verde-logo); transform: translateY(-10px); }
+        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+
+        footer { background: var(--azul-escuro); color: var(--branco); text-align: center; padding: 40px; margin-top: 50px; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <div class="logo-img">👁️</div> <div class="logo-text">VISION<span>BUY</span></div>
+        </div>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#impacto">O Impacto</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Autonomia que Transforma o Varejo</h1>
+        <p>Utilizamos Inteligência Artificial para guiar pessoas com deficiência visual, eliminando barreiras e criando uma experiência de compra digna.</p>
+        <a href="#impacto" class="btn-call">Descubra o Impacto</a>
+    </section>
+
+    <section id="impacto">
+        <h2 class="section-title">O Impacto Social</h2>
+        <div class="impacto-box">
+            <div class="impacto-text">
+                <h3>Não é apenas tecnologia, é liberdade.</h3>
+                <p>O VisionBuy atua diretamente na <strong>dor da dependência</strong>. No Brasil, milhões de pessoas enfrentam o isolamento no consumo. Nosso projeto causa impacto através de:</p>
+                <div class="impacto-stats">
+                    <div class="stat">
+                        <h4>100%</h4>
+                        <p>Autonomia na escolha</p>
+                    </div>
+                    <div class="stat">
+                        <h4>Zero</h4>
+                        <p>Barreiras de informação</p>
+                    </div>
+                </div>
+                <br>
+                <p>Ao implementar o VisionBuy, o supermercado deixa de ser um labirinto e se torna um ambiente inclusivo, onde o cliente PCD pode comparar preços e ler validades sem precisar pedir ajuda.</p>
+            </div>
+            <div style="flex: 0.8; text-align: center;">
+                <div style="background: #eee; border-radius: 15px; padding: 40px; border: 2px dashed #ccc;">
+                   <strong> [ESQUEMA DO PROJETO AQUI]</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologia" style="background-color: #fff;">
+        <h2 class="section-title">Nossas Soluções</h2>
+        <div class="grid-features">
+            <div class="feature-card">
+                <span class="icon">🎧</span>
+                <h3>Guia Sonoro 3D</h3>
+                <p>Navegação espacial que informa corredores e obstáculos via áudio de alta precisão.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🤖</span>
+                <h3>Visão Computacional</h3>
+                <p>IA que reconhece rótulos, lê códigos de barras e dita informações nutricionais.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">📍</span>
+                <h3>Geofencing Interno</h3>
+                <p>Localização precisa em tempo real dentro da loja para encontrar promoções e itens da lista.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2 class="section-title">Interessado na Inovação?</h2>
+        <div style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            <form>
+                <input type="text" placeholder="Seu Nome" style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ddd;">
+                <input type="email" placeholder="E-mail Corporativo" style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ddd;">
+                <button type="button" class="btn-call" style="width: 100%; border: none; cursor: pointer;">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>VisionBuy - Projeto de Inovação Acadêmica</strong></p>
+        <p>Desenvolvido para IFMG Ouro Preto | 2026</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Autor: Raí Julio de Souza - ADM 2D2</p>
+    </footer>
+
+</body>
+</html>
+
